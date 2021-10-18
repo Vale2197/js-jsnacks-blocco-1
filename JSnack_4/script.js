@@ -6,12 +6,16 @@ let userName = prompt("inserisci il tuo nome");
 
 /* verificare se tra gli invitati c'è l userName */
 for (let i = 0; i < invitati.length; i++) {
-    console.log(invitati[i]);
-    if ( invitati[i] == userName.toLowerCase ) {
-        console.log("welcome");
-    } 
+    console.log(invitati[i]);   
+    if ( invitati[i] == userName.toLowerCase() ) {
+        document.querySelector(".container").innerHTML = `Benvenuto ${userName}`;
+        break;
+    }
     else {
-        console.log("not work");
+        document.querySelector(".container").innerHTML = `non puoi entrare ${userName}`;
+        break;
     } 
-    
 }
+
+
+
